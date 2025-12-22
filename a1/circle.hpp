@@ -1,12 +1,12 @@
 #ifndef CIRCLE_HPP
 #define CIRCLE_HPP
 
-#include "shape.hpp";
-#include "base-types.hpp";
+#include "shape.hpp"
+#include "base-types.hpp"
 
 class Circle : public Shape {
     public:
-    Circle(point_t &pos, double radius);
+    Circle(const point_t& center, double radius);
 
     double getArea() const override;
 
@@ -14,7 +14,7 @@ class Circle : public Shape {
 
     void move(double xDiff, double yDiff) override;
 
-    void move(point_t &pos) override;
+    void move(const point_t& pos) override;
     
     private:
     double radius_;

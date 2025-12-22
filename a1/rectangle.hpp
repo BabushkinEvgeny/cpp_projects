@@ -1,12 +1,12 @@
 #ifndef RECTANGLE_HPP
 #define RECTANGLE_HPP
 
-#include "base-types.hpp";
-#include "shape.hpp";
+#include "base-types.hpp"
+#include "shape.hpp"
 
 class Rectangle: public Shape {
     public:
-    Rectangle(double width, double height, point_t &pos);
+    Rectangle(double width, double height, const point_t &center);
 
     double getArea() const override;
 
@@ -14,7 +14,7 @@ class Rectangle: public Shape {
 
     void move(double xDiff, double yDiff) override;
 
-    void move(point_t &pos) override;
+    void move(const point_t& pos) override;
 
     private:
     point_t center_;

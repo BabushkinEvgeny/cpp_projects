@@ -4,7 +4,7 @@
 #include <cmath>
 #include "base-types.hpp"
 
-Rectangle::Rectangle(double width, double height, point_t &center):
+Rectangle::Rectangle(double width, double height, const point_t &center):
 width_(width),
 height_(height),
 center_(center) {
@@ -26,6 +26,6 @@ void Rectangle::move(double xDiff, double yDiff) {
     center_.y += yDiff;
 };
 
-void Rectangle::move(point_t &pos) {
+void Rectangle::move(const point_t& pos) {
     center_ = pos;
 }

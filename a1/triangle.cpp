@@ -5,7 +5,7 @@
 #include "base-types.hpp"
 
 //add '==' check
-Triangle::Triangle(point_t a, point_t b, point_t c):
+Triangle::Triangle(const point_t a, const point_t b, const point_t c):
 a_(a),
 b_(b),
 c_(c) {
@@ -40,7 +40,7 @@ void Triangle::move(double xDiff, double yDiff) {
     center_.y += yDiff;
 }
 
-void Triangle::move(point_t &pos) {
+void Triangle::move(const point_t& pos) {
     double xDiff = pos.x - center_.x;
     double yDiff = pos.y - center_.y;
 

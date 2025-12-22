@@ -4,7 +4,7 @@
 #include <cmath>
 #include "base-types.hpp"
 
-Circle::Circle(point_t &center, double radius):
+Circle::Circle(const point_t& center, double radius):
 center_(center),
 radius_(radius) {
     if (radius <= 0 ) {
@@ -25,6 +25,6 @@ void Circle::move(double xDiff, double yDiff) {
     center_.y += yDiff;
 };
 
-void Circle::move(point_t &pos) {
+void Circle::move(const point_t& pos) {
     center_ = pos;
 };
